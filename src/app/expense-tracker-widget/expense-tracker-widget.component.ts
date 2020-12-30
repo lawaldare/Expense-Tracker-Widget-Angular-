@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Transaction } from '../transaction';
 
 @Component({
-  selector: 'app-expense-tracker-widget',
+  // selector: 'app-expense-tracker-widget',
   templateUrl: './expense-tracker-widget.component.html',
   styleUrls: ['./expense-tracker-widget.component.scss']
 })
