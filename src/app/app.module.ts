@@ -18,6 +18,7 @@ import { createCustomElement } from '@angular/elements';
     FormsModule
   ],
   providers: [],
+  entryComponents: [ExpenseTrackerWidgetComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
