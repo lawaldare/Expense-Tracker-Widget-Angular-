@@ -18,12 +18,11 @@ import { createCustomElement } from '@angular/elements';
     FormsModule
   ],
   providers: [],
-  entryComponents: [ExpenseTrackerWidgetComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(private injector: Injector) {
-    const myElement = createCustomElement(ExpenseTrackerWidgetComponent, { injector });
-    customElements.define('app-expense-tracker-widget', myElement);
+    const myElement = createCustomElement(AppComponent, { injector });
+    customElements.define('expense-tracker-widget', myElement);
   }
 }
