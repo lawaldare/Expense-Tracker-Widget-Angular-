@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Transaction } from '../transaction';
 
@@ -13,6 +13,9 @@ export class ExpenseTrackerWidgetComponent implements OnInit {
   totalIncome: number;
   totalExpense: number;
   totalBalance: number
+
+
+  @Input() header: string;
 
 
   localStorageTransactions = JSON.parse(
