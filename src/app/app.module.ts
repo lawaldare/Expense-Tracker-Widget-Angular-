@@ -23,7 +23,7 @@ import { createCustomElement } from '@angular/elements';
 })
 export class AppModule {
   constructor(private injector: Injector) {
-    const myElement = createCustomElement(AppComponent, { injector });
+    const myElement = createCustomElement(ExpenseTrackerWidgetComponent, { injector });
     customElements.define('app-expense-tracker-widget', myElement);
   }
 }
