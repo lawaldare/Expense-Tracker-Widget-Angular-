@@ -39,12 +39,6 @@ export class ExpenseTrackerWidgetComponent implements OnInit {
     this.updateData();
   }
 
-  sendMessageToParent(){
-    window.parent.postMessage({
-      total: this.totalIncome,
-      text: 'This is a message from the child web component'
-    }, '*')
-  }
 
   getTotalIncome() {
     const incomeArray = this.transactions.filter(a => a.category === '+'
