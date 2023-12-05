@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { NgForm } from '@angular/forms';
 import { Transaction } from '../transaction';
 
@@ -36,6 +37,13 @@ export class ExpenseTrackerWidgetComponent implements OnInit {
     localStorage.setItem('transactions', JSON.stringify(this.transactions));
     this.transactions = JSON.parse(localStorage.getItem('transactions')) !== null ? this.transactions : [];
     this.updateData();
+  }
+
+  sendMessageToParent(){
+    window.parent.postMessage({
+      total: this.totalIncome,
+      text: 'This is a message from the child web component'
+    }, '*')
   }
 
   getTotalIncome() {
